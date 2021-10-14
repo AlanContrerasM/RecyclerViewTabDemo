@@ -1,0 +1,43 @@
+//copy all images to the drawables folder
+//we are gonna create a tab based navigation, and a recycler view on the bottom.
+
+//the main package will have models and adapters.
+//Models has the data, which can be live data or db sources
+//adapter, is a viewgroup, contains the data, logic for arranging
+
+//order is as follow
+//on activity, we setContentView with a RecyclerView, which has a setAdpater,
+//that has an adapter object that houses data. helps inflate it and populating to an external layout
+//that external layout is an xml layout resource, that can be composed of fragments
+
+
+//lets tart
+//add tablayout to the activiyt_main
+//edit the id of the tab items
+//add the recyclerview and constraint it
+
+//let's add a class for containing the data, in the case, Tune class
+//add their variables, and then generate getters and setter, after generate a constructor
+
+//now on main activity, lets get the data, we could get from a db or wherever, but in this case
+//we are gonna create a list from where we get the data.
+//basically all the lists at the beginning of our main activity
+
+//now lets create a method that loads all the data, and from there we call it on the onCreate and log to confirm
+
+//for the view or fragment we create a new layout
+//create a new layout XML file, (layout folder right click, new>xml>layout xml file) not a resource!!, on the layout folder, layout_tune
+//change it to a constraintlayout, layout width and height, to wrap content
+//add for the image, and text, make it look nice, add gravity to text, constraints, etc.
+
+now we just need the adpater, so we connect our recyclerview to the data, and maybe later do the tabbing action.
+//create a new java class on main app, TuneAdapter and then extend RecyclerView.adapter
+//do not automatically import methods or override, instead create your own custom adpater.
+//follow all the instruction within the adapter file.
+
+//go back to the main activity, and on the on create continue creating the REcyclerView. step 11..
+
+//to set click listeners, continue on the tune adapter, inside the onCreateViewHolder we can set
+//the listener in the whole thing or per item inside. step 12.
+
+//create the tab listener on the main activity, step 13...
