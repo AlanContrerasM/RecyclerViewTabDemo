@@ -41,3 +41,10 @@ now we just need the adpater, so we connect our recyclerview to the data, and ma
 //the listener in the whole thing or per item inside. step 12.
 
 //create the tab listener on the main activity, step 13...
+
+
+
+//if we want to change to a different layout manager, just see what we did on the layout_tune2
+//leave it as a linear layout, horizontal
+//add your image view and text view, and whatever, set weights to distribute the space
+//weight is set up, with width/height set to 0dp, and then set weight

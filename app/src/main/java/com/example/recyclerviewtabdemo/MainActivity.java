@@ -2,6 +2,7 @@ package com.example.recyclerviewtabdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -30,18 +31,29 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        LoadModelData();
+        LoadModelData(); //function created at the end.
         Log.d(TAG, AllTunes.size() + " items in the all tunes list.");
 
 
         //11. call the recyclerView
+//        RecyclerView recyclerViewTunes = findViewById(R.id.recyclerViewTunes);
+//        //we want two columns
+//        GridLayoutManager gm = new GridLayoutManager(this, 2);
+//        recyclerViewTunes.setLayoutManager(gm);//set layout manager
+//        TuneAdapter tuneAdapter = new TuneAdapter(AllTunes, this);
+//        recyclerViewTunes.setAdapter(tuneAdapter);
+//        //should work now
+
+        //11.2 in case we set up our second adapter, for linear Layout
         RecyclerView recyclerViewTunes = findViewById(R.id.recyclerViewTunes);
         //we want two columns
-        GridLayoutManager gm = new GridLayoutManager(this, 2);
-        recyclerViewTunes.setLayoutManager(gm);//set layout manager
-        TuneAdapter tuneAdapter = new TuneAdapter(AllTunes, this);
+        LinearLayoutManager lm = new LinearLayoutManager(this);
+        recyclerViewTunes.setLayoutManager(lm);//set layout manager
+        TuneAdapter2 tuneAdapter = new TuneAdapter2(AllTunes, this);
         recyclerViewTunes.setAdapter(tuneAdapter);
         //should work now
+
+
 
         //13. only after setting event listener inside the adapter. set the tab functionality
         TabLayout tuneTabs = findViewById(R.id.tabLayout);
